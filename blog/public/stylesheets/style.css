@@ -6,3 +6,17 @@ body {
 a {
   color: #00B7FF;
 }
+
+/*.nav {
+
+}*/
+
+.profile-photo {
+	width: 80%;
+	height: 80%;
+
+}
+
+.center {
+	text-align: center;
+}

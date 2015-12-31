@@ -3,6 +3,17 @@ extends layout
 block content
 	div.container
 		div.row
-			div.col-md-4
-				h1= 'Bryden Fogelman'
+			div.col-md-4.center
+				img(src="/images/main.jpg").profile-photo
+				h3= 'Bryden Fogelman'
+				p
+					a(href="#") Home
+				p
+					a(href="#") Projects
+				p
+					a(href="#") Contact
 			div.col-md-8
+				each item, i in posts
+					h1= item.title
+					p= item.content
+

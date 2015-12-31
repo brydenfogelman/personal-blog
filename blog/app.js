@@ -5,6 +5,12 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+// Required for db
+var mongo = require('mongodb');
+var monk = require('monk');
+var db = monk('127.0.0.1:27017/my_app');
+// var db = monk('localhost:27017/my_app');
+
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
@@ -22,6 +28,13 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Allow our router files to use the database
+// Make our db accessible to our router
+app.use(function(req,res,next){
+    req.db = db;
+    next();
+});
+
 app.use('/', routes);
 app.use('/users', users);
 
@@ -32,7 +45,7 @@ app.use(function(req, res, next) {
   next(err);
 });
 
-// error handlers
+// ERROR HANDLERS
 
 // development error handler
 // will print stacktrace

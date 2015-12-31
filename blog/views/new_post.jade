@@ -1,0 +1,12 @@
+extends layout
+
+block content
+	div.container
+		form(action="/post/create" method="post")
+			legend New Post
+			div.form-group
+				label(for="title-field") Title
+				input(type="text" name="title" id="title-field").form-control
+			div.form-group
+				label(for="content-field") Content
+				textarea(type="text" name="content" id="content-field").form-control
