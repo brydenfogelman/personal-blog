@@ -8,7 +8,13 @@ var bodyParser = require('body-parser');
 // Required for db
 var mongo = require('mongodb');
 var monk = require('monk');
-var db = monk('mongodb://heroku_3h972t2t:heroku_3h972t2t@ds039165.mongolab.com:39165/heroku_3h972t2t');
+
+// var config = require('../config')();
+// var wrap = require('co-monk');
+var url = 'mongodb://example:example@ds039165.mongolab.com:39165/heroku_3h972t2t';
+var db = monk(url);
+
+// var db = monk('mongodb://heroku_3h972t2t:heroku_3h972t2t@ds039165.mongolab.com:39165/heroku_3h972t2t');
 // var db = monk('localhost:27017/my_app');
 
 var routes = require('./routes/index');
