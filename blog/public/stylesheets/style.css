@@ -1,29 +1,131 @@
+
+/* APPLIED TO EVERYTHING */
+html* {
+	font-family: 'Droid Sans', sans-serif;
+	color: #212121;
+}
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+	padding: 50px;
+/*	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;*/
+	background-color: #f8fafa;
 }
 
-a {
-  color: #00B7FF;
+.row {
+	display: block;
+	margin: auto;
+	margin-top: 50px;
 }
 
-/*.nav {
+h3 {
+	font-size: 2em;
+	color: #D32F2F;
+}
 
-}*/
+hr {
+	border-color: #727272;
+	border-width: 2px;
+	margin: 5px;
+}
+
+.btn-default {
+	background-color: #009688;
+	font-size: 1.3em;
+	color: white;
+}
+
+.btn-default:hover {
+	background-color: #00877A;
+	color: white;
+}
+
+/* NAVBAR */
+
+.navbar-default {
+	background-color: #F44336;
+}
+
+.navbar-default .navbar-brand {
+	color: white;
+}
+
+.navbar-default .navbar-brand:hover {
+	color: #B6B6B6;
+}
+
+.navbar-default .navbar-nav>li>a {
+	color: white;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+	color: #B6B6B6;
+}
+
+/* BIO */
+#about-me {
+	margin-top: 50px;
+}
 
 .profile-photo {
-	width: 80%;
-	height: 80%;
-
+	border-radius:50% 50% 50% 50%;  
+	width:300px;
+	height:300px;
+	display: block;
+	margin: auto;
 }
 
-.text-center {
-	text-align: center;
+/* 
+ul {
+	list-style: none;
+}*/
+
+/* PROJECTS */
+
+#projects {
+	margin-top: 20px;
 }
+
+.block-photo {
+	width: 300px;
+	height: auto;
+	display: inline-block;
+}
+
+/* BLOG */
+
+/*.blog {
+	width: 75%;
+}*/
+
+/* GENERAL CLASSES */
 
 .center-block {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+/* GENERAL MODIFICATIONS */
+a {
+	color: black;
+	text-decoration: none;
+	margin: 5px;
+}
+
+a:hover {
+	color: #727272;
+	text-decoration: none;
+}
+
+/* Random components */
+
+#resume {
+	margin-top: 15px;
+}
+
+/* WTF */
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+	color: #B6B6B6;
+	background-color: #F44336;
 }
 
