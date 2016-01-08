@@ -14,7 +14,7 @@ body {
 .row {
 	display: block;
 	margin: auto;
-	margin-top: 50px;
+	padding-top: 25px;
 }
 
 h3 {
@@ -25,7 +25,7 @@ h3 {
 hr {
 	border-color: #727272;
 	border-width: 2px;
-	margin: 5px;
+	padding-bottom: 25px
 }
 
 .btn-default {
@@ -63,7 +63,7 @@ hr {
 
 /* BIO */
 #about-me {
-	margin-top: 50px;
+
 }
 
 .profile-photo {
@@ -82,7 +82,7 @@ ul {
 /* PROJECTS */
 
 #projects {
-	margin-top: 20px;
+
 }
 
 .block-photo {
@@ -96,6 +96,29 @@ ul {
 /*.blog {
 	width: 75%;
 }*/
+
+/* CONTACT */
+
+#contact-form {
+	width: 50%;
+}
+
+/* MAKING FORMS LOOK PRETTY */
+
+.form-control {
+	background-color: transparent;
+	border-radius: 0px;
+	border: none;
+	border-bottom: 1px solid #B6B6B6;
+}
+
+.form-control:focus {
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	border-color: #B6B6B6;
+	box-shadow: 0 4px 2px -2px #D32F2F;
+}
 
 /* GENERAL CLASSES */
 
