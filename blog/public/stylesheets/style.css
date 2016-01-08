@@ -110,6 +110,7 @@ ul {
 	border-radius: 0px;
 	border: none;
 	border-bottom: 1px solid #B6B6B6;
+	box-shadow: none;
 }
 
 .form-control:focus {
@@ -117,7 +118,7 @@ ul {
 	border-right: none;
 	border-left: none;
 	border-color: #B6B6B6;
-	box-shadow: 0 4px 2px -2px #D32F2F;
+	box-shadow: 0 2px 1px -1px #D32F2F;
 }
 
 /* GENERAL CLASSES */
