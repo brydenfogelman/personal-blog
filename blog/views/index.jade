@@ -9,17 +9,20 @@ block content
 					ul.nav.navbar-nav
 						li
 							a(href="#microblog").nav-item Microblog
-							
-						li
-							a(href="#projects").nav-item Projects
 						li
 							a(href="#about-me").nav-item About me 
 						li
 							a(href="#contact").nav-item Contact
+						li
+							a(href="#projects").nav-item Projects
 	div.container-fluid.landing
+		div#landing-content
+			p#landing-header.text-center website design by bryden fogelman
+			p#landing-text.text-center tl;dr web developer in progress, check out all my work below
+			button(id="portfolio-btn" href="#").center-block.btn.btn-default view portfolio
 		//- div.container.text-center
 		//- 	p.text-center= "a personal website created by bryden fogelman."
-		//- 	button(id="portfolio-btn" href="#" ).btn.btn-default portfolio
+		//- 	
 	//- div.container
 		//- div.row#projects
 		//- 	h3.text-center= "Projects"
@@ -30,8 +33,6 @@ block content
 		//- 	div.col-md-6
 	div.container-fluid#microblog-container
 		div.md-padding#microblog
-			h1.text-center="\"My idea of life, it's what happens when they're rolling the credits.\""
-			h2.text-center ― M.T. Anderson, Feed
 			each item, i in posts
 				div.row.blog-item
 					a(href="#")
@@ -40,18 +41,20 @@ block content
 					p(id="abstract")= item.abstract
 					p(id="content")= item.content
 					//- button(id="read-more-btn" href="#" ).btn.btn-default Read More
+		hr
 
 	div.container-fluid.md-padding#about-me
 		div.col-md-4
 			img(src="/images/main.jpg").profile-photo
 		div.col-md-8
-			h4= "What's up dude? My name is Bryden."
+			h4= "A little bit about myself. My name is Bryden."
 			p= "I am an engineering physics student from the university of British Columbia and I live off of coffee. Engineering Physics is the \"jack of all trades\" engineering; its a solid mix of electrical and mechanical engineering as well as honours physics and almost a minor in math. What can you say, we Fizzers love to toture ourselves."
 			p= "The reason I choose enegineering physics was because I really wanted to make an impact in the world around me. With my vast background, I plan to use my skills to develop the technologies of the future."
 			p= "In my spare time I've taught myself web development as I really want to make a scene in the start-up world. In my struggle to deal with javascript, html and css, I built this website from scratch (well, I cheated and used bootstrap). To make things more interesting, I decided to create my own backend and a microblog."
 			br
+			//- h5.text-center="\"My idea of life, it's what happens when they're rolling the credits.\""
+			//- h6.text-center ― M.T. Anderson, Feed
 			button(id="resume-btn" href="#" ).btn.btn-default Check out my Resume!
-					
 	div.container-fluid.md-padding#contact
 		h1.text-center Contact
 		//- h3.text-center= "Contact"

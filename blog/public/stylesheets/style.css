@@ -3,12 +3,17 @@
 /*************************/
 html* {
 	font-family: 'Droid Sans', sans-serif;
+	font-size: 125%;
 }
 
 body {
 	/*padding: 50px;*/
 /*	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;*/
 	background-color: white;
+}
+
+p {
+	font-size: 1.2em;
 }
 
 /*******************/
@@ -66,16 +71,33 @@ hr {
 	background-image: url('/images/fuji.jpg');
 	background-size: cover;
 	width: 100%;
+	position: relative;
 }
 
-.header-title {
-	margin-top: 250px;
+#landing-content {
+	margin-top: 300px;
 }
 
-.header-title p {
-	color: white;
-	top: 50%;
+#landing-header {
+	color: rgba(240,240,240,0.8);
+	font-size: 1.6em;
 }
+
+#landing-text {
+	color: rgba(240,240,240,0.8);
+}
+
+#portfolio-btn {
+	background-color: #52527a;
+	color: rgba(240,240,240,0.8);
+	border: none;
+	padding: 12px;
+	margin-top: 40px;
+}
+#portfolio-btn:hover {
+	background-color: #48486b;
+}
+
 
 /********/
 /* BLOG */
