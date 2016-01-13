@@ -1,23 +1,26 @@
 extends layout
 
 block content
+	nav(data-spy="affix" data-offset-top="450")#navbar.nav.navbar-default.navbar-fixed-top
+			div.container
+				div.navbar-header
+					a.navbar-brand= "Bryden Fogelman"
+				div.collapse.navbar-collapse
+					ul.nav.navbar-nav
+						li
+							a(href="#microblog").nav-item Microblog
+							
+						li
+							a(href="#projects").nav-item Projects
+						li
+							a(href="#about-me").nav-item About me 
+						li
+							a(href="#contact").nav-item Contact
 	div.container-fluid.landing
-		h1.text-center= "Catalyze"
-		p.text-center= "A Personal website created by bryden fogelman."
-	div.container
-		//- div.row#about-me
-		//- 	h3.text-center= "About Me"
-		//- 	hr
-		//- 	div.col-md-4
-		//- 		img(src="/images/main.jpg").profile-photo
-				
-		//- 	div.col-md-8
-		//- 		h4= "What's up dude? My name is Bryden."
-		//- 		p= "I am an engineering physics student from the university of British Columbia and I live off of coffee. Engineering Physics is the \"jack of all trades\" engineering; its a solid mix of electrical and mechanical engineering as well as honours physics and almost a minor in math. What can you say, we Fizzers love to toture ourselves."
-		//- 		p= "The reason I choose enegineering physics was because I really wanted to make an impact in the world around me. With my vast background, I plan to use my skills to develop the technologies of the future."
-		//- 		p= "In my spare time I've taught myself web development as I really want to make a scene in the start-up world. In my struggle to deal with javascript, html and css, I built this website from scratch (well, I cheated and used bootstrap). To make things more interesting, I decided to create my own backend and a microblog."
-		//- 		br
-		//- 		button(id="resume-btn" href="#" ).btn.btn-default Check out my Resume!
+		//- div.container.text-center
+		//- 	p.text-center= "a personal website created by bryden fogelman."
+		//- 	button(id="portfolio-btn" href="#" ).btn.btn-default portfolio
+	//- div.container
 		//- div.row#projects
 		//- 	h3.text-center= "Projects"
 		//- 	hr
@@ -25,26 +28,41 @@ block content
 		//- 		div
 		//- 			img(src="/images/halp.jpg").block-photo
 		//- 	div.col-md-6
-		div.row#microblog
+	div.container-fluid#microblog-container
+		div.md-padding#microblog
+			h1.text-center="\"My idea of life, it's what happens when they're rolling the credits.\""
+			h2.text-center ― M.T. Anderson, Feed
 			each item, i in posts
 				div.row.blog-item
 					a(href="#")
 						h2(id="blog-title")= item.title
 					p(id="user")= "by " + item.user
-					p= item.abstract
-					button(id="read-more-btn" href="#" ).btn.btn-default Read More
+					p(id="abstract")= item.abstract
+					p(id="content")= item.content
+					//- button(id="read-more-btn" href="#" ).btn.btn-default Read More
+
+	div.container-fluid.md-padding#about-me
+		div.col-md-4
+			img(src="/images/main.jpg").profile-photo
+		div.col-md-8
+			h4= "What's up dude? My name is Bryden."
+			p= "I am an engineering physics student from the university of British Columbia and I live off of coffee. Engineering Physics is the \"jack of all trades\" engineering; its a solid mix of electrical and mechanical engineering as well as honours physics and almost a minor in math. What can you say, we Fizzers love to toture ourselves."
+			p= "The reason I choose enegineering physics was because I really wanted to make an impact in the world around me. With my vast background, I plan to use my skills to develop the technologies of the future."
+			p= "In my spare time I've taught myself web development as I really want to make a scene in the start-up world. In my struggle to deal with javascript, html and css, I built this website from scratch (well, I cheated and used bootstrap). To make things more interesting, I decided to create my own backend and a microblog."
+			br
+			button(id="resume-btn" href="#" ).btn.btn-default Check out my Resume!
 					
-		div.row#contact
-			h3.text-center= "Contact"
-			hr
-			form(method="post" action="/contact")#contact-form.center-block
-				legend New Post
-				div.form-group
-					input(type="text" name="name" id="name-field" placeholder='Your name ...').form-control
-				div.form-group
-					input(type="email" name="email" id="email-field" placeholder="Your email ...").form-control
-				div.form-group
-					textarea(type="text" name="message" id="message-field" placeholder="Your message for me ...").form-control
-				div.form-group
-					button(type="sumbit" id="contact").btn.btn-default.center-block Contact Me
+	div.container-fluid.md-padding#contact
+		h1.text-center Contact
+		//- h3.text-center= "Contact"
+		//- hr
+		form(method="post" action="/contact")#contact-form.center-block
+			div.form-group
+				input(type="text" name="name" id="name-field" placeholder='Your name ...').form-control
+			div.form-group
+				input(type="email" name="email" id="email-field" placeholder="Your email ...").form-control
+			div.form-group
+				textarea(type="text" name="message" id="message-field" placeholder="Your message for me ...").form-control
+			div.form-group
+				button(type="sumbit" id="contact").btn.btn-default.center-block Contact Me
 				

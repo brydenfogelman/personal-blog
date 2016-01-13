@@ -1,29 +1,33 @@
 .navbar-default {
-	background-color: #F44336;
+	background-color: rgba(0,0,0,0);
+	color: #7f8c8d;
 }
 
-.navbar-default .navbar-brand {
+/*.navbar-default .navbar-brand {
 	color: white;
-}
+}*/
 
 .navbar-default .navbar-brand:hover {
 	color: #B6B6B6;
 }
 
 .navbar-default .navbar-nav>li>a {
-	color: white;
 	padding-bottom: 5px;
 	margin-bottom: 10px;
 }
 
 .navbar-default .navbar-nav>li>a:hover {
-	border-bottom: 1px solid white;
-	color: white;
+	border-bottom: 1px solid #7f8c8d;
 }
 
 /* This is for when scrolling down, it will change which nav item is underlined */
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
-	border-bottom: 2px solid white;
+	border-bottom: 2px solid #7f8c8d;
+	background-color: rgba(165,165,195,0);
+	color: #7f8c8d;
+}
+
+#navbar.affix {
+	background-color: rgba(240,240,240,0.9);
 	color: white;
-	background-color: #F44336;
 }

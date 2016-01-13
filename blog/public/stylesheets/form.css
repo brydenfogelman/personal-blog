@@ -1,0 +1,28 @@
+/* MAKING FORMS LOOK PRETTY */
+.form-control {
+	background-color: transparent;
+	border-radius: 0px;
+	border: none;
+	border-bottom: 1px solid #B6B6B6;
+	box-shadow: none;
+}
+
+.form-control:focus {
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	border-color: #B6B6B6;
+	box-shadow: 0 2px 1px -1px #D32F2F;
+}
+
+/* Modifying the way buttons look and feel */
+.btn-default {
+	background-color: #2c3e50;
+	font-size: 1.3em;
+	color: white;
+}
+
+.btn-default:hover {
+	background-color: #34495e;
+	color: white;
+}
