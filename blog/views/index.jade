@@ -1,37 +1,39 @@
 extends layout
 
 block content
+	div.container-fluid.landing
+		h1.text-center= "Catalyze"
+		p.text-center= "A Personal website created by bryden fogelman."
 	div.container
-		div.row#about-me
-			h3.text-center= "About Me"
-			hr
-			div.col-md-4
-				img(src="/images/main.jpg").profile-photo
+		//- div.row#about-me
+		//- 	h3.text-center= "About Me"
+		//- 	hr
+		//- 	div.col-md-4
+		//- 		img(src="/images/main.jpg").profile-photo
 				
-			div.col-md-8
-				h4= "What's up dude? My name is Bryden."
-				p= "I am an engineering physics student from the university of British Columbia and I live off of coffee. Engineering Physics is the \"jack of all trades\" engineering; its a solid mix of electrical and mechanical engineering as well as honours physics and almost a minor in math. What can you say, we Fizzers love to toture ourselves."
-				p= "The reason I choose enegineering physics was because I really wanted to make an impact in the world around me. With my vast background, I plan to use my skills to develop the technologies of the future."
-				p= "In my spare time I've taught myself web development as I really want to make a scene in the start-up world. In my struggle to deal with javascript, html and css, I built this website from scratch (well, I cheated and used bootstrap). To make things more interesting, I decided to create my own backend and a microblog."
-				br
-				button(id="resume-btn" href="#" ).btn.btn-default Check out my Resume!
-		div.row#projects
-			h3.text-center= "Projects"
-			hr
-			div.col-md-6
-				div
-					img(src="/images/halp.jpg").block-photo
-			div.col-md-6
-			
+		//- 	div.col-md-8
+		//- 		h4= "What's up dude? My name is Bryden."
+		//- 		p= "I am an engineering physics student from the university of British Columbia and I live off of coffee. Engineering Physics is the \"jack of all trades\" engineering; its a solid mix of electrical and mechanical engineering as well as honours physics and almost a minor in math. What can you say, we Fizzers love to toture ourselves."
+		//- 		p= "The reason I choose enegineering physics was because I really wanted to make an impact in the world around me. With my vast background, I plan to use my skills to develop the technologies of the future."
+		//- 		p= "In my spare time I've taught myself web development as I really want to make a scene in the start-up world. In my struggle to deal with javascript, html and css, I built this website from scratch (well, I cheated and used bootstrap). To make things more interesting, I decided to create my own backend and a microblog."
+		//- 		br
+		//- 		button(id="resume-btn" href="#" ).btn.btn-default Check out my Resume!
+		//- div.row#projects
+		//- 	h3.text-center= "Projects"
+		//- 	hr
+		//- 	div.col-md-6
+		//- 		div
+		//- 			img(src="/images/halp.jpg").block-photo
+		//- 	div.col-md-6
 		div.row#microblog
-			h3.text-center= "Microblog"
-			hr
 			each item, i in posts
-				div.col-md-12.text-center.well
-					div.title
-						a(href="#")
-							h2= item.title
-					p= item.content
+				div.row.blog-item
+					a(href="#")
+						h2(id="blog-title")= item.title
+					p(id="user")= "by " + item.user
+					p= item.abstract
+					button(id="read-more-btn" href="#" ).btn.btn-default Read More
+					
 		div.row#contact
 			h3.text-center= "Contact"
 			hr

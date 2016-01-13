@@ -1,0 +1,17 @@
+.blog-item {
+	width: 50%;
+	margin: auto;
+}
+
+#blog-title {
+	display: inline-block;
+}
+
+#read-more-btn {
+	
+}
+
+#user {
+	display: inline-block;
+	text-align: right;
+}

@@ -41,36 +41,6 @@ hr {
 
 /* NAVBAR */
 
-.navbar-default {
-	background-color: #F44336;
-}
-
-.navbar-default .navbar-brand {
-	color: white;
-}
-
-.navbar-default .navbar-brand:hover {
-	color: #B6B6B6;
-}
-
-.navbar-default .navbar-nav>li>a {
-	color: white;
-	padding-bottom: 5px;
-	margin-bottom: 10px;
-}
-
-.navbar-default .navbar-nav>li>a:hover {
-	border-bottom: 1px solid white;
-	color: white;
-}
-
-/* This is for when scrolling down, it will change which nav item is underlined */
-.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
-	border-bottom: 2px solid white;
-	color: white;
-	background-color: #F44336;
-}
-
 /* BIO */
 #about-me {
 
@@ -103,9 +73,6 @@ ul {
 
 /* BLOG */
 
-/*.blog {
-	width: 75%;
-}*/
 
 
 
