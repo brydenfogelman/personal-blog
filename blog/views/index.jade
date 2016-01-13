@@ -33,7 +33,7 @@ block content
 		//- 	div.col-md-6
 	div.container-fluid#microblog-container
 		div.md-padding#microblog
-			each item, i in posts
+			each item, i in posts.reverse()
 				div.row.blog-item
 					a(href="#")
 						h2(id="blog-title")= item.title
