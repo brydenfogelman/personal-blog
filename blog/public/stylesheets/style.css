@@ -55,10 +55,20 @@ hr {
 
 .navbar-default .navbar-nav>li>a {
 	color: white;
+	padding-bottom: 5px;
+	margin-bottom: 10px;
 }
 
 .navbar-default .navbar-nav>li>a:hover {
-	color: #B6B6B6;
+	border-bottom: 1px solid white;
+	color: white;
+}
+
+/* This is for when scrolling down, it will change which nav item is underlined */
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+	border-bottom: 2px solid white;
+	color: white;
+	background-color: #F44336;
 }
 
 /* BIO */
@@ -96,6 +106,8 @@ ul {
 /*.blog {
 	width: 75%;
 }*/
+
+
 
 /* CONTACT */
 
@@ -142,14 +154,7 @@ a:hover {
 }
 
 /* Random components */
-
 #resume {
 	margin-top: 15px;
-}
-
-/* WTF */
-.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
-	color: #B6B6B6;
-	background-color: #F44336;
 }
 

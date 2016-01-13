@@ -27,9 +27,10 @@ block content
 			h3.text-center= "Microblog"
 			hr
 			each item, i in posts
-				div.col-md-6.text-center
-					a(href="#")
-						h2= item.title
+				div.col-md-12.text-center.well
+					div.title
+						a(href="#")
+							h2= item.title
 					p= item.content
 		div.row#contact
 			h3.text-center= "Contact"
