@@ -14,12 +14,13 @@ block content
 						li
 							a(href="#contact").nav-item Contact
 						li
-							a(href="#projects").nav-item Projects
+							a(href="/projects").nav-item Projects
 	div.container-fluid.landing
 		div#landing-content
 			p#landing-header.text-center website design by bryden fogelman
 			p#landing-text.text-center tl;dr web developer in progress, check out all my work below
-			button(id="portfolio-btn" href="#").center-block.btn.btn-default view portfolio
+			form(method="get" action="/projects")
+				button(type="submit" id="portfolio-btn").center-block.btn.btn-default view portfolio
 		//- div.container.text-center
 		//- 	p.text-center= "a personal website created by bryden fogelman."
 		//- 	
@@ -54,7 +55,8 @@ block content
 			br
 			//- h5.text-center="\"My idea of life, it's what happens when they're rolling the credits.\""
 			//- h6.text-center ― M.T. Anderson, Feed
-			button(id="resume-btn" href="#" ).btn.btn-default Check out my Resume!
+			form(method="get" action="/resume")
+				button(id="resume-btn" type="submit" ).btn.btn-default Check out my Resume!
 	div.container-fluid.md-padding#contact
 		h1.text-center Contact
 		//- h3.text-center= "Contact"

@@ -1,6 +1,39 @@
 extends layout
 
 block content
-	div.container-fluid
-		
-	div.container
+	nav#navbar.nav.navbar-default.navbar-fixed-top.affix
+			div.container
+				div.navbar-header
+					a.navbar-brand= "Bryden Fogelman"
+				div.collapse.navbar-collapse
+					ul.nav.navbar-nav
+						li
+							a.nav-item Press esc to go back
+						//- li
+						//- 	a(href="/projects").nav-item Projects
+	div.container-fluid#halp
+		div.row
+			div.col-md-8
+				//- img(src="../images/halp.jpg").img-responsive
+				div.video-container
+					iframe(src='https://player.vimeo.com/video/145592816', width='500', height='281', frameborder='0', webkitallowfullscreen='', mozallowfullscreen='', allowfullscreen='')
+			div.col-md-4
+				h1.project-title H.A.L.P
+				h4.project-header Overview
+				p.content= "Every year engineering physics students are challenged to make robots to compete in the ENPH 253 robotics competition. This years competition was to locate and retrieve stuffed animals from the competition surface. The robots used multiple sensing systems to navigate along the course. Once pets were located the robot would retrieve them and attempt to carry them back to safety before the wall of fire blocked its path."
+				p.content= "Members of Rescue One (Alexander Goddijn, Bryden Fogelman, Stefan Sander-Green, and Arjun Venkatesh) designed a robot, H.A.L.P., for the competition. H.A.L.P., along with 15 other robots, was built in 5 weeks."
+		div.row
+			div.col-md-6
+				h4.project-header Results
+				p.content="On competition day H.A.L.P. won both of its qualification rounds scoring eight out of nine possible points on both runs. Before finals got underway a software problem that was stopping H.A.L.P. from retrieving the final pet was fixed. H.A.L.P. won its quarterfinal match scoring all nine points. In the semi final H.A.L.P. and Botbot both scored eight, but Botbot advanced on time and went on going on to win the competition. In the third place match H.A.L.P. once again won by scoring nine points."
+				p.content= "This course was a challenging and rewarding learning opportunity for all members of Rescue One. We gained experience in Electrical, Mechanical and Software design as well as prototyping skills including: using Solidworks, using a waterjet cutter, using a laser cutter, soldering  and using hand tools."
+			div.col-md-6
+				img(src="../images/halp.jpg").img-responsive
+			
+
+
+
+	div.container-fluid#trails
+
+	div.container-fluid#nwhacks
+

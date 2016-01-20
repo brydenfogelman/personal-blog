@@ -21,6 +21,20 @@ router.get('/new_post', function(req, res, next) {
 	res.render('new_post');
 });
 
+// GET projects
+router.get('/projects', function(req, res, next) {
+	res.render('projects');
+});
+
+// GET resume
+router.get('/resume', function(request, response){
+	var resume="/public/files/resume-jan19.pdf";
+	fs.readFile(resume, function (err,data){
+		response.contentType("application/pdf");
+		response.send(data);
+	});
+});
+
 /* POST to add a new post */
 router.post('/new_post', function(req, res, next) {
 	var db = req.db;
