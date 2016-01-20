@@ -27,12 +27,9 @@ router.get('/projects', function(req, res, next) {
 });
 
 // GET resume
-router.get('/resume', function(request, response){
-	var resume="/public/files/resume-jan19.pdf";
-	fs.readFile(resume, function (err,data){
-		response.contentType("application/pdf");
-		response.send(data);
-	});
+router.get('/resume', function(req, res, next){
+	var path = require('path');
+	res.sendFile(path.resolve('public/files/resume-jan19.pdf'));
 });
 
 /* POST to add a new post */
@@ -55,6 +52,43 @@ router.post('/new_post', function(req, res, next) {
 		if(err) {
 			// on error
 			res.send('Making a new post failed.');
+		} else {
+			// on success
+			res.redirect('/');
+		}
+	});
+});
+
+/* POST send email */
+// TODO add oauth to send emails
+router.post('/contact', function(req, res, next){
+	var nodemailer = require('nodemailer');
+	var email = req.body.email;
+	var name = req.body.name;
+	var message = req.body.message;
+
+	// create reusable transporter object using the default SMTP transport
+	// THIS PART=
+	var transporter = nodemailer.createTransport('smtps://user%40gmail.com:pass@smtp.gmail.com');
+
+	// setup e-mail data with unicode symbols
+	var mailOptions = {
+	    from: '<' + email +'>', // sender address, name + ' ' + 
+	    to: 'bryden1995@gmail.com', // list of receivers
+	    subject: 'Message to Bryden Fogelman', // Subject line
+	    text: message
+	};
+
+	// send mail with defined transport object
+	transporter.sendMail(mailOptions, function(error, info){
+	    if(error){
+	        return console.log(error);
+	    }
+	    console.log('Message sent: ' + info.response);
+	}, function(err, doc) {
+		if(err) {
+			// on error
+			res.send('Sending email failed');
 		} else {
 			// on success
 			res.redirect('/');
